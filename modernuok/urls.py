@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from kabianga.views import home,signupuser ,loginuser ,logoutuser
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',home , name='home'),
+    path('signup/',signupuser,name='signupuser'),
+    path('login/',loginuser,name='loginuser'),
+    path('logout/',logoutuser,name='logoutuser'),
 ]
